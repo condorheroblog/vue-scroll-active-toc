@@ -1,7 +1,7 @@
 {
 	"name": "vue-scroll-active-toc",
 	"type": "module",
-	"version": "0.0.1",
+	"version": "0.0.0",
 	"private": false,
 	"description": "Vue 3 adapter for scroll-active-toc: a composable + SFC that highlights your table of contents while the page scrolls.",
 	"author": {
