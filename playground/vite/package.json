@@ -1,7 +1,7 @@
 {
 	"name": "vue-vite-playground",
 	"type": "module",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"private": true,
 	"description": "Vite playground & style demonstration for vue-scroll-active-toc.",
 	"scripts": {
