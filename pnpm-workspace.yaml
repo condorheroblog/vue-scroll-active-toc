@@ -1,0 +1,13 @@
+minimumReleaseAgeExcludePrune: true
+minimumReleaseAgeExclude:
+  - scroll-active-toc@0.0.2
+
+trustPolicy: no-downgrade
+shellEmulator: true
+
+packages:
+  - .
+  - playground/*
+
+allowBuilds:
+  simple-git-hooks: true

@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"lib": ["ESNext", "DOM", "DOM.Iterable"],
+		"useDefineForClassFields": true,
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"resolveJsonModule": true,
+		"types": ["node", "vitest/globals"],
+		"strict": true,
+		"noEmit": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"skipLibCheck": true
+	},
+	"include": ["src", "tests", "vite.config.ts", "vitest.config.ts"]
+}

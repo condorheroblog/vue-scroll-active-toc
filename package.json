@@ -1,0 +1,101 @@
+{
+	"name": "vue-scroll-active-toc",
+	"type": "module",
+	"version": "0.0.1",
+	"private": false,
+	"description": "Vue 3 adapter for scroll-active-toc: a composable + SFC that highlights your table of contents while the page scrolls.",
+	"author": {
+		"name": "Condor Hero",
+		"email": "love2xinwei@gmail.com"
+	},
+	"license": "MIT",
+	"homepage": "https://condorheroblog.github.io/vue-scroll-active-toc/",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/condorheroblog/vue-scroll-active-toc.git"
+	},
+	"bugs": {
+		"url": "https://github.com/condorheroblog/vue-scroll-active-toc/issues"
+	},
+	"keywords": [
+		"vue",
+		"vue3",
+		"composition-api",
+		"composable",
+		"scrollspy",
+		"scroll-spy",
+		"scroll-active",
+		"active-link",
+		"active-toc",
+		"toc",
+		"table-of-contents",
+		"single-file-component"
+	],
+	"sideEffects": false,
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/index.d.mts",
+				"default": "./dist/index.mjs"
+			},
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			}
+		},
+		"./style.css": "./dist/style.css",
+		"./package.json": "./package.json"
+	},
+	"main": "dist/index.cjs",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.mts",
+	"files": [
+		"dist/*"
+	],
+	"scripts": {
+		"prepare": "simple-git-hooks",
+		"prepublishOnly": "npm run build",
+		"build": "rm -rf dist && vue-tsc --noEmit && vite build",
+		"test": "vitest",
+		"test:run": "vitest run",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"typecheck": "vue-tsc --noEmit",
+		"dev": "pnpm --filter vue-vite-playground dev",
+		"play": "pnpm --filter vue-vite-playground dev",
+		"build:playground": "pnpm --filter vue-vite-playground build",
+		"release": "bumpp -r && pnpm -r publish --access public"
+	},
+	"dependencies": {
+		"scroll-active-toc": "^0.0.2"
+	},
+	"devDependencies": {
+		"@antfu/eslint-config": "^9.5.1",
+		"@microsoft/api-extractor": "^7.59.0",
+		"@types/node": "^26.4.1",
+		"@vitejs/plugin-vue": "^6.0.8",
+		"@vue/test-utils": "^2.5.0",
+		"bumpp": "^12.3.0",
+		"happy-dom": "^20.14.3",
+		"lint-staged": "^17.5.0",
+		"simple-git-hooks": "^2.14.0",
+		"typescript": "^6.0.3",
+		"unplugin-dts": "^1.1.0",
+		"vite": "8.2.2",
+		"vitest": "^4.1.11",
+		"vue": "^3.5.42",
+		"vue-tsc": "^3.3.11"
+	},
+	"simple-git-hooks": {
+		"pre-commit": "npx lint-staged"
+	},
+	"lint-staged": {
+		"*.{ts,js,mjs,cjs,cts,mts,json,md}": [
+			"eslint --fix"
+		]
+	},
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org"
+	}
+}
