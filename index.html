@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Vue Scroll Active TOC — Interactive Vite Playground</title>
+    <meta
+      name="description"
+      content="An interactive style playground for vue-scroll-active-toc: a Vue 3 composable and component that highlights your table of contents while the page or any container scrolls."
+    />
+    <meta name="author" content="Condor Hero" />
+    <meta name="theme-color" content="#42b883" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+
+    <!-- Open Graph sharing meta (icons & logos) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Vue Scroll Active TOC" />
+    <meta property="og:title" content="Vue Scroll Active TOC — Interactive Vite Playground" />
+    <meta
+      property="og:description"
+      content="Scroll-spy table of contents for Vue 3: reactive options, instant click highlighting, any scroll container, dark mode and i18n."
+    />
+    <meta property="og:url" content="https://condorheroblog.github.io/vue-scroll-active-toc/" />
+    <meta property="og:image" content="https://condorheroblog.github.io/vue-scroll-active-toc/og-image.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+
+    <!-- Twitter / X sharing card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vue Scroll Active TOC — Interactive Vite Playground" />
+    <meta
+      name="twitter:description"
+      content="Scroll-spy table of contents for Vue 3: reactive options, instant click highlighting, any scroll container."
+    />
+    <meta name="twitter:image" content="https://condorheroblog.github.io/vue-scroll-active-toc/og-image.svg" />
+
+    <!-- Apply the persisted theme before first paint to avoid a flash -->
+    <script>
+      (function applyInitialTheme() {
+        try {
+          var stored = localStorage.getItem("vsat-theme");
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (stored === "dark" || (!stored && prefersDark)) {
+            document.documentElement.classList.add("dark");
+          }
+          var storedLocale = localStorage.getItem("vsat-locale");
+          if (storedLocale) document.documentElement.lang = storedLocale;
+        } catch (error) {
+          /* localStorage unavailable — defaults are fine */
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-Dx2yS4kY.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CQ1qgcSw.css">
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
